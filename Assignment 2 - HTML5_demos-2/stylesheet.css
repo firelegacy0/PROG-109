@@ -1,0 +1,41 @@
+@charset"UTF-8";
+/* CSS Document */
+
+div.image {
+	float:left;
+	margin-bottom:20px;
+} 
+	
+div.globe {
+	float:left;
+	margin-left:10px;
+}
+
+div.bottom {
+	border-bottom:1px solid green; 
+	clear:both;
+}
+
+body {
+	margin-left:100px;
+	width:800px; 
+	background-color:cornsilk;
+}
+
+article {
+	border:1px solid lightgray;padding:16px;
+	border-style: dashed;
+}
+
+h2, h3 {
+	color:steelblue
+}
+
+p.blue {
+	color:steelblue;
+	font-size:28px;
+} 
+	
+p.footer {
+	color:steelblue;
+}
