@@ -1,0 +1,62 @@
+@charset"UTF-8";
+/* CSS Styling Sheet */
+
+div.doge {
+    float: left;
+    margin-bottom: 20px;
+
+}
+
+div.shiba {
+    float: left;
+    margin-bottom: 20px;
+}
+
+div.fluffy{
+    float: left;
+    padding-right: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px;
+    background-color: cornsilk;
+}
+
+article {
+    border-style: dashed;
+    border: 1px solid lightgray;
+    padding 10px;
+}
+
+h1 {
+    font-size: 25px;
+    /* background: #D3B4F3; */
+    background: #EEE9F4;
+    display: inline-block;
+    padding: 2px;
+    text-shadow: 0px 2px 0 rgba(0,0,0,.2);
+}
+
+h2 {
+    font-size: 20px;
+    color: rgb(9, 140, 163);
+}
+
+p {
+    font-size: 15px;
+ }
+ 
+ p.description {
+     font-size: 18px;
+     background: #EEE9F4;
+     display: inline-block;
+     padding: 2px;
+ }
+
+ footer {
+     
+     background: #EEE9F4;
+     display: inline-block;
+     padding: 2px;
+ }
