@@ -1,0 +1,19 @@
+@charset"UTF-8";
+/* CSS Document */
+
+div.area1 {
+    width: 500px;
+    height: 200px;
+    background-color: #E0D1F4;
+    /* border-width: 5px; */
+    border-style: dashed;
+    border: 5px solid gray;
+    padding: 5px;
+    /* justify-content: center; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cornsilk;
+    padding: 10px 10px;
+}
