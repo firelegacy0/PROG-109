@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Mad Lib V2 </title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+
+<h3> Mad Lib v2 </h3>
+
+<p>Fill in the form and click Submit for magic!</p>
+
+<!-- Text fields collect user inputs -->
+<p>Enter adjective #1 <input type="text" id="text1"></p>
+
+<p>Enter adjective #2 <input type="text" id="text2"></p>
+
+<p>Enter adjective #3 <input type="text" id="text3"></p>
+
+<p>Enter adjective #4 <input type="text" id="text4"></p>
+
+<p>Enter name of a meat <input type="text" id="text5"></p>
+
+<p>Enter a verb <input type="text" id="text6"></p>
+
+<p>Enter a color <input type="text" id="text7"></p>
+
+
+<!-- Button that trigger function  -->
+<button onclick="myFunction()"> Submit </button>
+
+<!-- Displays paragraph with ID 'story' -->
+<p id="story"></p>
+
+<script>
+
+// Function to concatenate inputs into story
+function myFunction() {
+    var adj_1 = document.getElementById("text1").value;
+    var adj_2 = document.getElementById("text2").value;
+    var adj_3 = document.getElementById("text3").value;
+    var adj_4 = document.getElementById("text4").value;
+    var meat = document.getElementById("text5").value;
+    var verb_1 = document.getElementById("text6").value;
+    var color = document.getElementById("text7").value;
+
+    // variable concatenates story
+    var story_time = "It was a " + adj_1 + ", cold December day. I woke up to the " + adj_2 +" smell of " + meat + " roasting downstairs in the kitchen. I happily " + verb_1 + " down the stairs. There is a " + color + " tree decorated with " + adj_3 + " bells and " + adj_4 + " gifts underneath. Oh, it's Christmas! ";
+    
+    //sets innerHTML of ID 'story'
+    document.getElementById("story").innerHTML = story_time;
+
+}
+</script>
+
+</body>
+
+</html>
