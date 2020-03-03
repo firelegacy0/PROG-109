@@ -1,0 +1,65 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 6: Fortune Teller </title>
+</head>
+
+<body>
+
+    <h1>Welcome to Fortune Teller</h1>
+
+    <p>Type in a question and see the answer to it..</p>
+
+    <!-- Dummy text input area -->
+    <input type="text">
+
+    <!-- Submit button that triggers function -->
+    <button onclick="myFunction()"> Submit </button>
+
+    <!-- Display output text to user -->
+    <p id="result"></p>
+
+<script>
+
+    //Function generates a random number
+    //and return a prediction based on random number generated
+    function myFunction() {
+                    
+            var prediction;
+
+            //Generate a random number between 1 and 6
+            var number = Math.floor( Math.random() * 6) + 1;
+            
+            //Conditional If-Else cases for each number between 1 and 6
+            //sets different responses based on number
+                if (number == 1) {
+                    prediction = "Yes";
+
+                } else if (number == 2) {
+                    prediction = "Looks Good";
+
+                } else if (number == 3) {
+                    prediction = "No";
+
+                } else if (number == 4) {
+                    prediction = "Very likely";
+
+                } else if (number == 5) {
+                    prediction = "Unlikely";
+
+                } else if (number == 6) {
+                    prediction = "I don't feel too good..";
+                }
+        
+         document.getElementById("result").innerHTML = prediction;
+        
+        }
+            
+        
+</script>
+
+</body>
+
+</html>
