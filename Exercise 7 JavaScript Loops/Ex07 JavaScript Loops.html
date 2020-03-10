@@ -1,0 +1,81 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 7 - Mad Lib</title>
+</head>
+
+<body>
+
+    <h1> Exercise 7: JavaScript Loops </h1>
+
+
+    <script>
+
+        //Demo using For-Loop
+        document.write("For Loop Example:" + "<br>" + "<br>");
+
+        //For-Loop variables
+        var i;
+        var j;
+        var text = "#";
+
+        //Nested Loop Structure
+        //Outer Loop no. of Rows
+        for (i=1; i<=9; i++) {
+            
+            //Inner Loop repeats text based on number of Rows
+            //E.g 2nd Row, write statement repeats 2x 
+            for (j=1; j<=i; j++) {
+                
+                document.write(text);
+            }
+            
+            //new line
+            document.write("<br>");
+        }
+        
+        //Page line break
+        document.write("<br>");
+
+        //Demo using While-Loop
+        document.write("While-Loop Example:" + "<br>" + "<br>");
+        
+        //While-Loop variables
+        var text = "#";
+        var i = 0;
+
+        //While-Loop starts
+        while (i<9) {
+            document.write(text +  "<br>");
+            text += "#";
+
+            //Condition to update While-Loop
+            i++;
+        }
+
+        //Page line break
+        document.write("<br>");
+
+        //Demo using Do-While Loop
+        document.write("Do-While Loop Example:" + "<br>" + "<br>");
+
+        //Do-While Loop variables
+        var text = "";
+        var i = 0;
+
+        //Do-While Loop starts at least once
+        do {
+            text+= "#";
+            document.write(text + "<br>");
+            i++;
+        }
+
+        //While Conditions to specify number of loops
+        while (i<9);
+    </script>
+
+</body>
+</html>
+
