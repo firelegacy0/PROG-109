@@ -1,0 +1,53 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 8: Fizz Buzz </title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+
+</head>
+
+<body>
+        <div class="description">
+        <h1>Exercise 8: Fizz Buzz</h1>
+        <h2> Fizz Buzz Printer </h2>
+        <p> If number is divisible by 3, prints FIZZ </p>
+        <p> If number is divisible by 5, prints BUZZ </p>
+
+        <button onclick="printText()"> Try it! </button>
+        </div>
+
+        <div class="box">
+        <p id="demo"></p>
+        </div>
+
+        <script>
+
+            //Function sets innerHTML to print numbers 1 to 100
+            //if number is divisible by 3, prints "FIZZ"
+            //if number is divisible by 5, prints "BUZZ"
+            //else prints number
+            function printText() {
+
+                for (i=1; i<=100; i++) {
+
+                    if (i%3 == 0) {
+                        document.getElementById("demo").innerHTML += "FIZZ" + "<br>";
+
+                    } else if (i%5 == 0) {
+                        document.getElementById("demo").innerHTML += "BUZZ" + "<br>";
+                        
+                    } else {
+                        document.getElementById("demo").innerHTML += i + "<br>";
+                    
+                    }
+                }     
+            }
+
+        </script>
+    </div>
+
+</body>
+</html>
+
