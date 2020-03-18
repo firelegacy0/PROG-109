@@ -1,0 +1,128 @@
+<!-- Author: Jarrel Khoo
+Course: PROG 109
+Date: 2020-03-18
+Description: Final Assignment: Dice Game -->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Final Assignment: Dice Game</title>
+<link rel="stylesheet" href="diceStyle.css">
+</head>
+
+<body>
+    <!-- First Window -->
+    <section id="introScreen">
+        <img src="diceimages/placeholder2.png" id="placeholder2">
+        <h1> Welcome To the Dice Game </h1>
+        <h3><span> How to play: </span></h3>
+        <p> Click <b>"Throw Dice"</b> to roll the dice, if you roll a <b>7</b> or <b>11</b>, you win. </br>
+        If you roll a <b>2</b>, you lose.</p>
+        <button id="start">Let's Begin </button>
+        <div id="bottomText">
+            <h6>This game is designed using JavaScript and HTML </h6>
+            <img src="diceimages/placeholder1.png" id="placeholder1">
+        </div>
+    </section>
+
+    <!-- Second Window -->
+    <section id="gameScreen">
+
+        <!-- Image of Dice 1 -->
+        <div id="dices">
+            <img src="diceimages/d1.png" id="mydice1">
+
+            <!-- Image of Dice 2 -->
+            <img src="diceimages/d1.png" id="mydice2">
+
+            <!-- Game Controls -->
+            <div id="gameControls">
+                <button id="throwDice"> Throw Dice </button>
+                <button id="restart"> Start Over</button>
+                <p id="result"> </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+    // TotalScore Global Variable
+    // Track Player's Score
+    var totalScore = 0;
+
+    // Event Listener ID Variables
+    var startBtn = document.getElementById("start");
+    var restartBtn = document.getElementById("restart");
+    var introScreen = document.getElementById("introScreen");
+	var gameScreen = document.getElementById("gameScreen");
+    var rollDice = document.getElementById("throwDice");
+
+    // 3 Event Listeners activate on click:
+    // Start Button (Shows Game Screen)
+    // Restart Button (Restart Game by Reloading Page)
+    // Throw Dice (Calls function throwDice)
+    startBtn.addEventListener("click", startGameHandler, false);
+    restartBtn.addEventListener("click", restartGameHandler, false);
+    rollDice.addEventListener("click", throwdice, false);
+
+    function startGameHandler( ) {
+        // Hide the intro screen, show the game screen
+        introScreen.style.display = "none";
+        gameScreen.style.display = "block";
+    }
+
+    function restartGameHandler( ) {
+        // This reloads the current page, means restarting the game
+        document.location.href="";
+        
+    }
+
+    // Array used to store dice images
+    var diceFace=new Array("diceImages/d1.png", "diceImages/d2.png", "diceImages/d3.png", "diceImages/d4.png", "diceImages/d5.png", "diceImages/d6.png"); 
+
+    // Create Image References
+    // mydice1 = image 1
+    // mydice2 = image 2
+    var imageDice1=document.querySelector("#mydice1");
+    var imageDice2=document.querySelector("#mydice2");
+
+    // Function to throw dice
+    function throwdice(){
+        
+        // create a random integer between 0 and 5
+        // Do-While Loop to make sure both random generated numbers are different
+        // Makes dice roll different numbers
+        var randomDice1=Math.floor(Math.random()*6);
+
+        // Check if one of the dice matches the other
+        // if same, reroll second dice
+        do {
+            var randomDice2=Math.floor(Math.random()*6);
+        }
+        while (randomDice1 == randomDice2);
+
+        // Reference Images of Dice from array based on random number generated above
+        imageDice1.src=diceFace[randomDice1];
+        imageDice2.src=diceFace[randomDice2];
+
+        // Adds 1 to each generated number to match actual dice number
+        // Used for comparing results below
+        randomDice1 = randomDice1 + 1;
+        randomDice2 = randomDice2 + 1;
+        var result = randomDice1 + randomDice2;
+       
+        if (result == 7 || result == 11) {
+            totalScore += 1;
+            document.getElementById("result").innerHTML = "You Win! Total Score: " + totalScore;
+
+        } else if (result == 2) {
+            totalScore -= 1;
+            document.getElementById("result").innerHTML = "You Lose! Total Score: " + totalScore;
+        }
+    }
+
+    </script>
+</body>
+        
+    </html>
